@@ -1,0 +1,51 @@
+<html ng-app="app">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/chat.js"></script>
+  </head>
+
+  <body>
+    <div class="msger" ng-controller="ChatController">
+      <header class="msger-header">
+        <div class="msger-header-title">
+          <img src="assets/images/chat.png" alt="chat icon" width="12" height="12"> Chat - Suporte
+        </div>
+        <div class="msger-header-options">
+          <!-- <span>Config</span> -->
+        </div>
+      </header>
+    
+      <div class="msger-chat" data-ng-init="onloadEve()">
+        <div class={{message.class}} ng-repeat="message in messages">
+          <div
+          class="msg-img"
+          style="background-image: url({{message.image}})"
+          ></div>
+    
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">{{ message.sender }}</div>
+              <div class="msg-info-time">{{ message.hour }}</div>
+            </div>
+    
+            <div class="msg-text">
+              {{ message.text }}
+            </div>
+            <button type="button" class="msger-option-btn" ng-click="clickOption(button.button)" ng-repeat="button in message.buttons">{{ button.button.text }}</button>
+          </div>
+        </div>
+        <a href="#" id="anchor"></a>
+      </div>
+      
+      <form class="msger-inputarea">
+        <input type="text" id="msger-input" class="msger-input" ng-model="message.text" placeholder="Digite sua mensagem..." disabled>
+        <button type="submit" id="msger-send" class="msger-send-btn" ng-click="sendMessage()" disabled>Enviar</button>
+      </form>
+      
+    </div>
+  </body>
+</html>

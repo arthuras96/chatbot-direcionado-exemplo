@@ -1,0 +1,300 @@
+{
+	"responses": [
+		{
+			"conversation_id": 1,
+			"client_msger": "",
+			"intent": "welcome",
+			"relevance": "",
+			"enable_chat": false,
+			"intent_direction": "",
+			"output": [
+				{
+					"response_type": "text",
+					"text": "Bem vindo! Selecione uma das opções para abertura de ticket. 😄"
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Secretária",
+						"output_text": "Desejo atendimento para a secretária.",
+						"intent_direction": "secretary_ticket"
+					}
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Acadêmico",
+						"output_text":"Desejo atendimento para a área acadêmica.",
+						"intent_direction": "academic_ticket"
+					}
+				}
+			]
+		},
+		{
+			"conversation_id": 2,
+			"client_msger": "",
+			"intent": "secretary_ticket",
+			"relevance": "",
+			"enable_chat": true,
+			"intent_direction": "secretary_ticket_confirm",
+			"output": [
+				{
+					"response_type": "text",
+					"text": "Escreva detalhadamente sobre o seu problema."
+				}
+			]
+		},
+		{
+			"conversation_id": 3,
+			"client_msger": "",
+			"intent": "academic_ticket",
+			"relevance": "",
+			"enable_chat": true,
+			"intent_direction": "academic_ticket_confirm",
+			"output": [
+				{
+					"response_type": "text",
+					"text": "Escreva detalhadamente sobre o seu problema."
+				}
+			]
+		},
+		{
+			"conversation_id": 4,
+			"client_msger": "",
+			"intent": "secretary_ticket_confirm",
+			"relevance": "",
+			"enable_chat": false,
+			"intent_direction": "",
+			"output": [
+				{
+					"response_type": "text",
+					"text": "Deseja editar a mensagem?."
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Sim",
+						"output_text": "Sim.",
+						"intent_direction": "secretary_ticket_edit"
+					}
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Não",
+						"output_text":"Não, o texto está correto.",
+						"intent_direction": "secretary_ticket_end"
+					}
+				}
+			]
+		},
+		{
+			"conversation_id": 5,
+			"client_msger": "",
+			"intent": "academic_ticket_confirm",
+			"relevance": "",
+			"enable_chat": false,
+			"intent_direction": "",
+			"output": [
+				{
+					"response_type": "text",
+					"text": "Deseja editar a mensagem?."
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Sim",
+						"output_text": "Sim.",
+						"intent_direction": "academic_ticket_edit"
+					}
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Não",
+						"output_text":"Não, o texto está correto.",
+						"intent_direction": "academic_ticket_end"
+					}
+				}
+			]
+		},
+		{
+			"conversation_id": 6,
+			"client_msger": "",
+			"intent": "secretary_ticket_edit",
+			"relevance": "",
+			"enable_chat": true,
+			"intent_direction": "secretary_ticket_confirm",
+			"output": [
+				{
+					"response_type": "text",
+					"text": "Ok, pode descrever novamente, por gentileza?."
+				}
+			]
+		},
+		{
+			"conversation_id": 7,
+			"client_msger": "",
+			"intent": "academic_ticket_edit",
+			"relevance": "",
+			"enable_chat": true,
+			"intent_direction": "academic_ticket_confirm",
+			"output": [
+				{
+					"response_type": "text",
+					"text": "Ok, pode descrever novamente, por gentileza?."
+				}
+			]
+		},
+		{
+			"conversation_id": 8,
+			"client_msger": "",
+			"intent": "secretary_ticket_end",
+			"relevance": "",
+			"enable_chat": false,
+			"intent_direction": "",
+			"output": [
+				{
+					"response_type": "text",
+					"text": "Seu ticket foi aberto com sucesso! Você receberá uma confirmação via e-mail cadastrado no sistema."
+				},
+				{
+					"response_type": "text",
+					"text": "Deseja realizar outra solicitação?"
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Sim",
+						"output_text": "Sim, desejo realizar outras ações.",
+						"intent_direction": "another_options"
+					}
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Não",
+						"output_text":"Não, minhas solicitações eram apenas essas.",
+						"intent_direction": "end_chat"
+					}
+				}
+			]
+		},
+		{
+			"conversation_id": 9,
+			"client_msger": "",
+			"intent": "academic_ticket_end",
+			"relevance": "",
+			"enable_chat": false,
+			"intent_direction": "",
+			"output": [
+				{
+					"response_type": "text",
+					"text": "Seu ticket foi aberto com sucesso! Você receberá uma confirmação via e-mail cadastrado no sistema."
+				},
+				{
+					"response_type": "text",
+					"text": "Deseja realizar outra solicitação?"
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Sim",
+						"output_text": "Sim, desejo realizar outras ações.",
+						"intent_direction": "another_options"
+					}
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Não",
+						"output_text":"Não, minhas solicitações eram apenas essas.",
+						"intent_direction": "end_chat"
+					}
+				}
+			]
+		},
+		{
+			"conversation_id": 10,
+			"client_msger": "",
+			"intent": "another_options",
+			"relevance": "",
+			"enable_chat": false,
+			"intent_direction": "",
+			"output": [
+				{
+					"response_type": "text",
+					"text": "Certo! Em qual opção posso lhe ajudar?"
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Secretária",
+						"output_text": "Desejo atendimento para a secretária.",
+						"intent_direction": "secretary_ticket"
+					}
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Acadêmico",
+						"output_text":"Desejo atendimento para a área acadêmica.",
+						"intent_direction": "academic_ticket"
+					}
+				}
+			]
+		},
+		{
+			"conversation_id": 11,
+			"client_msger": "",
+			"intent": "end_chat",
+			"relevance": "",
+			"enable_chat": false,
+			"intent_direction": "",
+			"output": [
+				{
+					"response_type": "text",
+					"text": "Ok! Muito obrigado por falar comigo. 😄"
+				},
+				{
+					"response_type": "button",
+					"button": 
+					{
+						"text": "Reiniciar",
+						"output_text":"",
+						"intent_direction": "restart"
+					}
+				}
+			]
+		},
+		{
+			"conversation_id": 12,
+			"client_msger": "",
+			"intent": "restart",
+			"relevance": "",
+			"enable_chat": false,
+			"intent_direction": "",
+			"output": [
+				{
+					"response_type": "text",
+					"text": ""
+				}
+			]
+		}
+
+	]
+	
+
+}
